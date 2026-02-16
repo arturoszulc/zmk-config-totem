@@ -140,6 +140,7 @@
             require-prior-idle-ms = <(-1)>;
             tapping-term-ms = <180>;
             hold-while-undecided;
+            flavor = "balanced";
         };
 
         cflt: cflt {
@@ -254,10 +255,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &trans  &bt BT_CLR  &out OUT_TOG  &trans  &trans            &kp F12  &kp F7  &kp F8  &kp F9  &kp LC(KP_PLUS)
-              &trans  &bt BT_NXT  &trans        &trans  &bt BT_CLR_ALL    &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(NUMBER_0)
-&kp CAPSLOCK  &trans  &bt BT_PRV  &trans        &trans  &sys_reset        &kp F10  &kp F1  &kp F2  &kp F3  &kp LC(KP_MINUS)  &bootloader
-                                  &trans        &trans  &trans            &trans   &trans  &trans
+            &bt BT_CLR_ALL  &bt BT_CLR  &out OUT_TOG  &trans           &kp LG(F5)        &kp F12  &kp F7  &kp F8  &kp F9  &kp LC(KP_PLUS)
+            &trans          &bt BT_NXT  &trans        &trans           &kp LS(F5)        &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(NUMBER_0)
+&sys_reset  &trans          &bt BT_PRV  &trans        &trans           &kp LS(LG(F5))    &kp F10  &kp F1  &kp F2  &kp F3  &kp LC(KP_MINUS)  &bootloader
+                                        &kp C_VOL_DN  &kp C_VOLUME_UP  &kp F12           &trans   &trans  &trans
             >;
         };
 
