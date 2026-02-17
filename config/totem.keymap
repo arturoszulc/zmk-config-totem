@@ -136,11 +136,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            quick-tap-ms = <(-1)>;
-            require-prior-idle-ms = <(-1)>;
-            tapping-term-ms = <180>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
             hold-while-undecided;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
 
         cflt: cflt {
@@ -177,10 +177,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q              &kp W           &kp E               &kp R                &kp T            &kp Y      &kp U             &kp I            &kp O        &kp P
-            &cfmod LEFT_WIN A  &cfmod LCTRL S  &cfmod RIGHT_ALT D  &cfmod LEFT_SHIFT F  &kp G            &kp H      &mt LEFT_SHIFT J  &mt RIGHT_ALT K  &mt LCTRL L  &mt LEFT_WIN SEMICOLON
-&kp ESCAPE  &kp Z              &kp X           &kp C               &kp V                &kp B            &kp N      &kp M             &kp COMMA        &kp DOT      &kp SLASH               &kp SINGLE_QUOTE
-                                               &cflt 2 TAB         &kp BACKSPACE        &cflt 1 SPACE    &kp ENTER  &kp DEL           &cflt 3 MINUS
+            &kp Q              &kp W        &kp E            &kp R             &kp T            &kp Y      &kp U             &kp I            &kp O        &kp P
+            &cfmod LEFT_WIN A  &mt LCTRL S  &mt RIGHT_ALT D  &mt LEFT_SHIFT F  &kp G            &kp H      &mt LEFT_SHIFT J  &mt RIGHT_ALT K  &mt LCTRL L  &cfmod LEFT_WIN SEMICOLON
+&kp ESCAPE  &kp Z              &kp X        &kp C            &kp V             &kp B            &kp N      &kp M             &kp COMMA        &kp DOT      &kp SLASH                  &kp SINGLE_QUOTE
+                                            &cflt 2 TAB      &kp BACKSPACE     &cflt 1 SPACE    &kp ENTER  &kp DEL           &cflt 3 MINUS
             >;
         };
 
