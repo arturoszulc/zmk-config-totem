@@ -25,9 +25,9 @@
 &mt {
     quick-tap-ms = <(-1)>;
     global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <250>;
-    require-prior-idle-ms = <200>;
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    require-prior-idle-ms = <(-1)>;
 };
 
 &sl { release-after-ms = <200>; };
@@ -149,9 +149,10 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            quick-tap-ms = <(-1)>;
+            quick-tap-ms = <175>;
             require-prior-idle-ms = <(-1)>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <280>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -203,10 +204,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp ESC          &kp LC(S)  &kp UP        &kp LC(R)        &kp T        &kp STAR   &kp N7        &kp N8        &kp N9        &kp PLUS
-           &mt LSHFT LC(A)  &kp LEFT   &kp DOWN      &kp RIGHT        &kp LC(F)    &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&kp SPACE  &kp LC(Z)        &kp LC(X)  &kp LC(C)     &kp LC(V)        &kp LC(Y)    &trans     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &trans     &trans
-                                       &kp C_VOL_DN  &kp C_VOLUME_UP  &trans       &trans     &kp N0        &kp DOT
+         &kp ESC          &kp LC(S)  &kp UP        &kp LC(R)        &kp T        &kp STAR   &kp N7        &kp N8        &kp N9        &kp PLUS
+         &mt LSHFT LC(A)  &kp LEFT   &kp DOWN      &kp RIGHT        &kp LC(F)    &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+&kp F12  &kp LC(Z)        &kp LC(X)  &kp LC(C)     &kp LC(V)        &kp LC(Y)    &trans     &kp N1        &kp NUMBER_2  &kp NUMBER_3  &trans     &trans
+                                     &kp C_VOL_DN  &kp C_VOLUME_UP  &trans       &trans     &kp N0        &kp DOT
             >;
         };
 
@@ -255,10 +256,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &bt BT_CLR_ALL  &bt BT_CLR  &out OUT_TOG  &trans           &kp LG(F5)        &kp F12  &kp F7  &kp F8  &kp F9  &kp LC(KP_PLUS)
+            &bt BT_CLR_ALL  &bt BT_CLR  &out OUT_TOG  &trans           &kp LC(F5)        &kp F12  &kp F7  &kp F8  &kp F9  &kp LC(KP_PLUS)
             &trans          &bt BT_NXT  &trans        &trans           &kp LS(F5)        &kp F11  &kp F4  &kp F5  &kp F6  &kp LC(NUMBER_0)
 &sys_reset  &trans          &bt BT_PRV  &trans        &trans           &kp LS(LG(F5))    &kp F10  &kp F1  &kp F2  &kp F3  &kp LC(KP_MINUS)  &bootloader
-                                        &kp C_VOL_DN  &kp C_VOLUME_UP  &kp F12           &trans   &trans  &trans
+                                        &kp C_VOL_DN  &kp C_VOLUME_UP  &trans            &trans   &trans  &trans
             >;
         };
 
