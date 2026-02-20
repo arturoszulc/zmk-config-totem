@@ -201,7 +201,7 @@
             &kp Q              &kp W           &kp E               &kp R                &kp T        &kp Y           &kp U                &kp I               &kp O           &kp P
             &cfmod LEFT_WIN A  &cfmod LCTRL S  &cfmod RIGHT_ALT D  &cfmod LEFT_SHIFT F  &kp G        &kp H           &cfmod LEFT_SHIFT J  &cfmod RIGHT_ALT K  &cfmod LCTRL L  &cfmod LEFT_WIN SEMICOLON
 &kp ESCAPE  &kp Z              &kp X           &kp C               &kp V                &kp B        &kp N           &kp M                &kp COMMA           &kp DOT         &kp SLASH                  &trans
-                                               &cflt 2 BACKSPACE   &cflt 1 TAB          &kp SPACE    &kp LEFT_SHIFT  &kp LALT             &cflt 3 DEL
+                                               &cflt 2 TAB         &cflt 1 BACKSPACE    &kp SPACE    &kp LEFT_SHIFT  &kp LALT             &cflt 3 DEL
             >;
         };
 
