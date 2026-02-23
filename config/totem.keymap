@@ -157,7 +157,7 @@
 
             #binding-cells = <2>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <(-1)>;
             tapping-term-ms = <280>;
             hold-while-undecided;
             flavor = "tap-preferred";
@@ -200,8 +200,8 @@
             bindings = <
             &kp Q              &kp W           &kp E               &kp R                &kp T        &kp Y           &kp U                &kp I               &kp O           &kp P
             &cfmod LEFT_WIN A  &cfmod LCTRL S  &cfmod RIGHT_ALT D  &cfmod LEFT_SHIFT F  &kp G        &kp H           &cfmod LEFT_SHIFT J  &cfmod RIGHT_ALT K  &cfmod LCTRL L  &cfmod LEFT_WIN SEMICOLON
-&kp ESCAPE  &kp Z              &kp X           &kp C               &kp V                &kp B        &kp N           &kp M                &kp COMMA           &kp DOT         &kp SLASH                  &trans
-                                               &cflt 2 TAB         &cflt 1 BACKSPACE    &kp SPACE    &kp LEFT_SHIFT  &kp LALT             &cflt 3 DEL
+&kp ESCAPE  &kp Z              &kp X           &kp C               &kp V                &kp B        &kp N           &kp M                &kp COMMA           &kp DOT         &kp SLASH                  &cflt 3 DELETE
+                                               &cflt 2 TAB         &cflt 1 BACKSPACE    &kp SPACE    &kp LEFT_SHIFT  &kp LALT             &kp RET
             >;
         };
 
@@ -224,10 +224,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp ESC          &kp LC(S)  &kp UP        &kp LC(R)        &kp F12      &kp STAR   &kp N7                      &kp N8                    &kp N9                 &kp PLUS
-            &mt LSHFT LC(A)  &kp LEFT   &kp DOWN      &kp RIGHT        &kp LC(F)    &kp SLASH  &cfmod LEFT_SHIFT NUMBER_4  &cfmod LEFT_ALT NUMBER_5  &cfmod LCTRL NUMBER_6  &cfmod LEFT_GUI MINUS
-&kp RETURN  &kp LC(Z)        &kp LC(X)  &kp LC(C)     &kp LC(V)        &kp LC(Y)    &trans     &kp N1                      &kp NUMBER_2              &kp NUMBER_3           &trans                 &kp EQUAL
-                                        &kp C_VOL_DN  &kp C_VOLUME_UP  &trans       &trans     &kp N0                      &kp DOT
+            &kp ESC  &kp LC(S)  &kp UP        &kp LC(R)        &kp F12      &kp STAR   &kp N7                      &kp N8                    &kp N9                 &kp PLUS
+            &trans   &kp LEFT   &kp DOWN      &kp RIGHT        &kp LC(F)    &kp SLASH  &cfmod LEFT_SHIFT NUMBER_4  &cfmod LEFT_ALT NUMBER_5  &cfmod LCTRL NUMBER_6  &cfmod LEFT_GUI MINUS
+&kp RETURN  &trans   &trans     &trans        &kp LC(V)        &kp LC(Y)    &trans     &kp N1                      &kp NUMBER_2              &kp NUMBER_3           &trans                 &kp EQUAL
+                                &kp C_VOL_DN  &kp C_VOLUME_UP  &trans       &trans     &kp N0                      &kp DOT
             >;
         };
 
