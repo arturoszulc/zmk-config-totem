@@ -156,10 +156,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <150>;
             require-prior-idle-ms = <(-1)>;
-            tapping-term-ms = <280>;
-            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            flavor = "balanced";
         };
 
         cflt: cflt {
