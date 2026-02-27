@@ -14,6 +14,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -130,6 +131,11 @@
             bindings = <&kp ASTERISK>;
             key-positions = <23 22>;
         };
+
+        backtick {
+            bindings = <&kp GRAVE>;
+            key-positions = <21 22>;
+        };
     };
 
     macros {
@@ -197,10 +203,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q                &kp W           &kp E               &kp R              &kp T        &kp Y           &kp U              &kp I               &kp O           &kp P
-            &cfmod LEFT_SHIFT A  &cfmod LCTRL S  &cfmod RIGHT_ALT D  &cfmod LEFT_GUI F  &kp G        &kp H           &cfmod LEFT_GUI J  &cfmod RIGHT_ALT K  &cfmod LCTRL L  &cfmod LEFT_SHIFT SEMICOLON
-&kp ESCAPE  &kp Z                &kp X           &kp C               &kp V              &kp B        &kp N           &kp M              &kp COMMA           &kp DOT         &kp SLASH                    &cflt 3 DELETE
-                                                 &cflt 2 TAB         &cflt 1 BACKSPACE  &kp SPACE    &kp LEFT_SHIFT  &kp LALT           &kp RET
+                &kp Q                &kp W           &kp E               &kp R              &kp T        &kp Y           &kp U              &kp I               &kp O           &kp P
+                &cfmod LEFT_SHIFT A  &cfmod LCTRL S  &cfmod RIGHT_ALT D  &cfmod LEFT_GUI F  &kp G        &kp H           &cfmod LEFT_GUI J  &cfmod RIGHT_ALT K  &cfmod LCTRL L  &cfmod LEFT_SHIFT SEMICOLON
+&cflt 2 ESCAPE  &kp Z                &kp X           &kp C               &kp V              &kp B        &kp N           &kp M              &kp COMMA           &kp DOT         &kp SLASH                    &cflt 3 DELETE
+                                                     &cflt 2 TAB         &cflt 1 BACKSPACE  &kp SPACE    &kp LEFT_SHIFT  &kp LALT           &kp RET
             >;
         };
 
@@ -249,10 +255,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp EXCL   &kp AT     &kp RA(E)   &kp EQUAL          &kp PRCNT           &kp STAR          &kp UNDER              &kp AMPERSAND    &kp RA(O)         &kp PLUS
-           &kp RA(A)  &kp RA(S)  &kp DOLLAR  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE    &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp RA(L)         &kp DELETE
-&kp CARET  &kp RA(Z)  &kp RA(X)  &kp RA(C)   &kp QUESTION       &kp HASH            &kp RA(N)         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp MINUS   &kp TILDE
-                                 &trans      &trans             &trans              &trans            &trans                 &trans
+           &kp EXCL   &kp AT          &mmv MOVE_UP    &kp EQUAL        &kp PRCNT           &msc SCRL_UP    &trans          &mmv MOVE_UP    &trans           &trans
+           &kp RA(A)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp SINGLE_QUOTE    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+&kp CARET  &kp RA(Z)  &kp RA(X)       &kp RA(C)       &kp QUESTION     &kp HASH            &trans          &trans          &trans          &trans           &trans  &trans
+                                      &trans          &trans           &mkp LCLK           &mkp RCLK       &trans          &trans
             >;
         };
 
